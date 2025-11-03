@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | VDRMS</title>
+
+  <style>
+    /* Reset and Base Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #007bff, #00b894);
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      border-bottom: 5px solid #0277bd;
+    }
+
+    .logo {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffe082;
+      text-decoration: underline;
+    }
+
+    /* Main Section */
+    main {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .form-section {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section h2 {
+      color: #007bff;
+      margin-bottom: 15px;
+      border-left: 4px solid #00b894;
+      padding-left: 10px;
+    }
+
+    .form-section p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      background: #f9fbfc;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+      background: #007bff;
+      color: white;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    tr:nth-child(even) {
+      background: #eaf2ff;
+    }
+
+    tr:hover {
+      background: #d4f8e8;
+      transition: 0.3s ease;
+    }
+
+    td {
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Helpline Section */
+    ul {
+      list-style: none;
+      margin: 20px 0;
+      padding-left: 10px;
+    }
+
+    ul li {
+      background: #e3f2fd;
+      margin: 8px 0;
+      padding: 12px;
+      border-left: 5px solid #007bff;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    ul li strong {
+      color: #007bff;
+    }
+
+    /* Office Info */
+    h3 {
+      color: #00b894;
+      margin-top: 25px;
+    }
+
+    p {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 15px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 20px;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      th, td {
+        padding: 8px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="https://images.indianexpress.com/2017/01/garib-das-village-480.jpg?w=389" width="200" height="200"  alt="VDRMS Logo" class="logo">
+    <h1>Village Drainage and Roads Management System</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Contact Officials</h2>
+      <p>If you face any drainage or road-related issues, please reach out to the concerned officials below. They are responsible for monitoring, reporting, and resolving complaints in your area.</p>
+
+      <table>
+        <tr>
+          <th>Designation</th>
+          <th>Name</th>
+          <th>Contact Number</th>
+          <th>Email</th>
+        </tr>
+        <tr>
+          <td>Village Sarpanch</td>
+          <td>Mr. Ramesh Kumar</td>
+          <td>+91 98765 41001</td>
+          <td>sarpanch.vdrms@village.gov.in</td>
+        </tr>
+        <tr>
+          <td>Panchayat Secretary</td>
+          <td>Ms. Lakshmi Devi</td>
+          <td>+91 98765 41002</td>
+          <td>secretary.vdrms@village.gov.in</td>
+        </tr>
+        <tr>
+          <td>Assistant Engineer (Roads)</td>
+          <td>Mr. Srinivas Rao</td>
+          <td>+91 98765 41003</td>
+          <td>engineer.roads@vdrms.in</td>
+        </tr>
+        <tr>
+          <td>Drainage Maintenance Officer</td>
+          <td>Mrs. Anitha Reddy</td>
+          <td>+91 98765 41004</td>
+          <td>drainage@vdrms.in</td>
+        </tr>
+        <tr>
+          <td>Public Grievance Officer</td>
+          <td>Mr. Rajesh Babu</td>
+          <td>+91 98765 41005</td>
+          <td>grievances@vdrms.in</td>
+        </tr>
+      </table>
+
+      <h2>Helpline Numbers</h2>
+      <ul>
+        <li><strong>Road Repair Helpline:</strong> 1800-123-4567</li>
+        <li><strong>Drainage Block Helpline:</strong> 1800-987-6543</li>
+        <li><strong>Emergency Flood Response:</strong> 1800-222-1111</li>
+      </ul>
+
+      <h2>Office Address</h2>
+      <p>
+        Village Development Office, <br>
+        Near Panchayat Bhavan, <br>
+        Guntur District, Andhra Pradesh - 522508
+      </p>
+
+      <h3>Office Timings</h3>
+      <p>Monday to Saturday — 9:00 AM to 5:00 PM</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 VDRMS | Managed by Village Development Department</p>
+  </footer>
+</body>
+</html>
