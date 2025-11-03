@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Village Drainage & Roads Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="https://images.indianexpress.com/2017/01/garib-das-village-480.jpg?w=389" 
+         alt="VDRMS Logo" width="200" height="200" class="logo" />
+    <h1>Village Drainage and Roads Management System</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="pages/about.html">About</a>
+      <a href="pages/contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Intro Section -->
+    <section class="intro">
+      <h2>Welcome to VDRMS</h2>
+      <p>
+        The <strong>Village Drainage and Roads Management System</strong> (VDRMS) helps 
+        identify and resolve drainage and road-related problems in rural areas. 
+        Report an issue below to help your village stay clean, connected, and safe!
+      </p>
+    </section>
+
+    <!-- Report Issue Section -->
+    <section class="report-section">
+      <h2>Report an Issue</h2>
+      <form id="issueForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="village">Village Name:</label>
+        <input type="text" id="village" placeholder="Enter your village name" required />
+
+        <label for="issueType">Type of Issue:</label>
+        <select id="issueType" required>
+          <option value="">-- Select Issue Type --</option>
+          <option value="Drainage Blockage">Drainage Blockage</option>
+          <option value="Pothole">Pothole</option>
+          <option value="Flooded Road">Flooded Road</option>
+          <option value="Broken Bridge">Broken Bridge</option>
+          <option value="Others">Others</option>
+        </select>
+
+        <label for="description">Description:</label>
+        <textarea id="description" rows="4" placeholder="Describe the issue..." required></textarea>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location or landmark" required />
+        <button type="button" id="mapBtn" class="map-btn">📍 Choose from Map</button>
+
+        <!-- Upload Image Option -->
+        <label for="imageUpload">Upload Image (optional):</label>
+        <input type="file" id="imageUpload" accept="image/*" />
+
+        <button type="submit">Submit Issue</button>
+      </form>
+
+      <!-- Success message -->
+      <p id="successMessage" class="success-message"></p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <h2>Our Key Objectives</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Improve Connectivity</h3>
+          <p>Ensure roads are maintained and accessible year-round.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Prevent Diseases</h3>
+          <p>Keep drains clean to reduce stagnant water and mosquito breeding.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Boost Participation</h3>
+          <p>Empower citizens to report issues easily through our platform.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Manage Resources</h3>
+          <p>Track maintenance activities and allocate resources efficiently.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 VDRMS | Empowering Villages with Better Infrastructure</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('issueForm');
+    const successMessage = document.getElementById('successMessage');
+    const mapBtn = document.getElementById('mapBtn');
+    const locationInput = document.getElementById('location');
+
+    // ✅ Handle form submission
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      successMessage.textContent = "✅ Submitted Successfully!";
+      successMessage.style.display = "block";
+      setTimeout(() => {
+        successMessage.textContent = "";
+      }, 4000);
+      form.reset();
+    });
+
+    // ✅ Choose from Map (using Geolocation API)
+    mapBtn.addEventListener('click', () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            const mapsUrl = `https://www.google.com/maps?q=${lat},${lon}`;
+            locationInput.value = `Latitude: ${lat.toFixed(4)}, Longitude: ${lon.toFixed(4)}`;
+            window.open(mapsUrl, "_blank");
+          },
+          (error) => {
+            alert("Unable to fetch location. Please enable location access or type manually.");
+          }
+        );
+      } else {
+        alert("Geolocation is not supported by your browser.");
+      }
+    });
+  </script>
+</body>
+</html>

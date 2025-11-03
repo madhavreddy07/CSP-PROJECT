@@ -1,0 +1,216 @@
+/* ---------- General Styles ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f0f6ff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: linear-gradient(90deg, #007bff, #004080);
+  color: white;
+  padding: 20px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+}
+
+/* ---------- Intro Section ---------- */
+.intro {
+  text-align: center;
+  padding: 60px 10%;
+  background-color: white;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.intro h2 {
+  color: #004080;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ---------- Report Section ---------- */
+.report-section {
+  background: white;
+  padding: 40px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.report-section h2 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+#issueForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#issueForm label {
+  font-weight: 600;
+  color: #333;
+}
+
+#issueForm input,
+#issueForm textarea,
+#issueForm select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#issueForm input:focus,
+#issueForm textarea:focus,
+#issueForm select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+#issueForm button {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#issueForm button:hover {
+  background: linear-gradient(90deg, #0056b3, #003d80);
+}
+
+.success-message {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+  display: none;
+}
+
+/* ---------- Features Section ---------- */
+.features {
+  background: #e9f2ff;
+  padding: 50px 10%;
+}
+
+.features h2 {
+  text-align: center;
+  color: #004080;
+  margin-bottom: 25px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #004080;
+  color: white;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .report-section,
+  .intro {
+    width: 90%;
+    padding: 25px;
+  }
+}
